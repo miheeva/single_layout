@@ -1,0 +1,73 @@
+/* fonts */
+@font-face {
+  font-family: OSLight;
+  src: url('../fonts/OpenSans/OpenSans-Light.ttf');
+}
+@font-face {
+  font-family: OSRegular;
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: OSSemibold;
+  src: url('../fonts/OpenSans/OpenSans-Semibold.ttf');
+}
+@font-face {
+  font-family: OSBold;
+  src: url('../fonts/OpenSans/OpenSans-Bold.ttf');
+}
+@font-face {
+  font-family: OSExtrabold;
+  src: url('../fonts/OpenSans/OpenSans-Extrabold.ttf');
+}
+/*vars*/
+$lightGray: #cecece;
+$lightGrayPl: #c9c9c9;
+$white: #fff;
+$black: #000;
+$veryBigText: 2.8125rem;
+$bigText: 1.4375rem;
+$coverText: 2.2rem;
+$Text: 1rem;
+$backCover: #f7f7f7;
+
+
+/*classes*/
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  font-family: OSRegular;
+}
+
+.blackBtn {
+  position: absolute;
+  top: 30px;
+  height: 42px;
+  font-family: OSSemibold;
+  font-size: $bigText;
+  color: $black;
+  border-radius: 5px;
+  border: 2px solid $black;
+  text-transform: uppercase;
+  background: transparent;
+  transition: all .4s;
+  cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+    &.publishBtn {
+      right: -174px;
+      width: 144px;
+    }
+    &.buyBtn {
+      right: -106px;
+      width: 76px;
+    }
+}
+
+

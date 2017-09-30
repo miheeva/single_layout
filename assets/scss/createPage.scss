@@ -1,0 +1,113 @@
+body {
+  .createForm {
+    min-width: 560px;
+    max-width: 560px;
+    form {
+      width: 100%;
+      padding-top: 20px;
+      position: relative;
+      input {
+      width: 100%;
+        outline: none;
+        &.textInput {
+          border: none;
+
+        }
+        &.nameSong{
+          @include webkitPlaceholder($lightGrayPl, $veryBigText, OSLight);
+          @include mozPlaceholder($lightGrayPl, $veryBigText, OSLight);
+          font-family: OSLight;
+          font-size: $veryBigText;
+          color: $black;
+        }
+        &.textSong {
+          @include webkitPlaceholder($lightGrayPl, $Text, OSLight);
+          @include mozPlaceholder($lightGrayPl, $Text, OSLight);
+          font-size: $bigText;
+          font-family: OSLight;
+          color: $black;
+        }
+        &.linkInput {
+          @include webkitPlaceholder($lightGrayPl, $Text + 0.2, OSLight);
+          @include mozPlaceholder($lightGrayPl, $Text + 0.2, OSLight);
+          padding: 5px 10px 5px 37px;
+          font-size: $Text + 0.2;
+          border: 1px solid $lightGrayPl;
+
+        }
+        &.iTunesLink {
+          background: url("../img/itunes.png") no-repeat 6px;
+          background-size: 5%;
+          margin-bottom: 30px;
+        }
+        &.GPLink{
+          background: url("../img/googleplay.png") no-repeat 8px;
+          background-size: 4%;
+        }
+
+      }
+      label.imgUpload {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        height: 530px;
+        line-height: 2em;
+        background-color: $backCover;
+        margin-top: 85px;
+        .imgUploadBtn {
+          display: block;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          text-align: center;
+          font-size: $coverText;
+          color: $lightGrayPl;
+          font-family: OSExtrabold;
+          text-transform: uppercase;
+          span.sizes {
+            display: block;
+            padding-top: 5px;
+            font-family: OSRegular;
+            font-size: $bigText;
+            text-transform: lowercase;
+          }
+        }
+        input[type=file]{
+          position: absolute;
+          top: 0;
+          opacity: 0;
+        }
+      }
+      label.musicUpload {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        height: 40px;
+        line-height: 2em;
+        background-color: $backCover;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .musicUploadBtn {
+          display: block;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          text-align: center;
+          font-size: $bigText;
+          color: $lightGrayPl;
+          font-family: OSExtrabold;
+          text-transform: uppercase;
+          img {
+            height: 25px;
+            width: auto;
+            opacity: .3;
+            margin-top: 7px;
+          }
+        }
+        input[type=file]{
+          position: absolute;
+          top: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

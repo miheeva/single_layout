@@ -1,0 +1,20 @@
+@mixin webkitPlaceholder($color: $lightGrayPl, $fontSize: $bigText, $fontFamily: OSLight) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+  }
+}
+
+@mixin mozPlaceholder($color: $lightGrayPl, $fontSize: $bigText, $fontFamily: OSLight) {
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+  }
+}
