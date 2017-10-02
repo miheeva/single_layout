@@ -18,10 +18,17 @@
                 modal.hide();
             }
         });
-        var loadFile = function(event) {
-            var output = document.getElementById('output');
-            output.src = URL.createObjectURL(event.target.files[0]);
-        };
+        var loadImg = document.getElementById('loadImg');
+        if (loadImg) {
+            loadImg.addEventListener('change', function (event) {
+                var previewImg = document.getElementById('previewImg');
+                previewImg.src = URL.createObjectURL(event.target.files[0]);
+                if (previewImg.val != '') {
+                    $('.imgUploadBtn').text('');
+                    $('.sizes').remove();
+                };
+            })
+        }
     });
 
     function labelWidth() {
@@ -31,8 +38,7 @@
     function resizeCover() {
         var cover = $('.coverImg');
         if ($(window).height() < 685) {
-            console.log($(window).height());
-            cover.css('height',$(window).height() + 'px');
+            cover.css('max-height',$(window).height() + 'px');
         }
     }
     function uploadMusic() {
@@ -100,18 +106,7 @@
     // }
 
 
-    var loadImg = document.getElementById('loadImg');
-    if (loadImg) {
-        loadImg.addEventListener('change', function (event) {
-            var previewImg = document.getElementById('previewImg');
-            previewImg.src = URL.createObjectURL(event.target.files[0]);
-            if (previewImg.val != '') {
-                $('.imgUploadBtn').text('');
-                $('.sizes').remove();
-            }
-            ;
-        })
-    }
+
 
 
 

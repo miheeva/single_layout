@@ -1,12 +1,18 @@
 body {
   .createForm {
-    min-width: 560px;
+    width: 560px;
     max-width: 560px;
+    @media screen and (max-width: 1024px) {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
     form {
       width: 100%;
       padding-top: 20px;
       position: relative;
       .textSong {
+        -webkit-appearance: none;
         font-size: $bigText;
         font-family: OSLight;
         color: $black;
@@ -44,9 +50,9 @@ body {
       input {
       width: 100%;
         outline: none;
+        -webkit-appearance: none;
         &.textInput {
           border: none;
-
         }
         &.nameSong {
           @include webkitPlaceholder($lightGrayPl, $veryBigText, OSLight);

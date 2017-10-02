@@ -1,7 +1,22 @@
 /* portrait*/
-
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   body {
+    .indexBtn {
+      .containerBtn {
+        height: 93vh;
+      }
+      .logo {
+        width: 180px;
+      }
+      .record {
+        width: 65px;
+      }
+    }
+    .createForm {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
     .blackBtn {
       &.publishBtn {
         position: relative;
@@ -52,11 +67,9 @@
 }
 
 @media screen and (max-width: 560px) and (orientation: portrait) {
-  body {
-    .createForm {
-      min-width: 100%;
-      max-width: 100%;
-    }
+
+  .createForm {
+    min-width: 100%;
   }
   .coverContainer {
     flex: 0 0 100%;
@@ -138,6 +151,11 @@
 }
 @media screen and (max-width: 998px) and (orientation: landscape) {
   body {
+    .createForm {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
     .musicPageContainer {
       max-width: 100%;
     }
@@ -205,12 +223,11 @@
       }
     }
   }
-
-@media screen and (min-width: 1300px), screen and (max-height: 800px) {
-  .coverContainer img {
-    //max-height: 800px;
-
+@media screen and (-webkit-device-pixel-ratio: 0) {
+  input, textarea {
+    font-size: 16px;
+    &:focus {
+      font-size: 16px;
+    }
   }
-
-
 }

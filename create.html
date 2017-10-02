@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CREATE|SINGLE</title>
+    <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css"></link>
 </head>
 <body>
@@ -12,17 +13,17 @@
     <div class="row">
         <div class="col justify-content-center align-items-center flex-column">
             <form action="page.html">
-                <input id="nameSong" class="nameSong textInput" required type="text" placeholder="Name of the song">
-                <textarea id="textSong" class="textSong textInput" required type="text" placeholder="Lyrics..."></textarea>
+                <input id="nameSong" class="nameSong textInput setValid" required type="text" oninvalid="this.setCustomValidity('Fill this guy')" oninput="setCustomValidity('')" placeholder="Name of the song">
+                <textarea id="textSong" class="textSong textInput setValid" required type="text" oninvalid="this.setCustomValidity('Fill this guy')" oninput="setCustomValidity('')" placeholder="Lyrics..."></textarea>
                 <!--<input class="fileSong" type="file">-->
                 <label class="imgUpload justify-content-center align-items-center flex-column">
-                    <span class="imgUploadBtn">Cover <span class="sizes">(1180x1180)</span></span>
-                    <input id="loadImg" required type="file" accept="image/*">
+                    <span class="imgUploadBtn">Cover1 <span class="sizes">(1180x1180)</span></span>
+                    <input id="loadImg" class="setValid" required type="file" oninvalid="this.setCustomValidity('Fill this guy')" oninput="setCustomValidity('')" accept="image/*" onchange="loadFile(event)">
                     <img id="previewImg" class="previewImg">
                 </label>
                 <label class="musicUpload justify-content-center align-items-center flex-column">
                     <span class="musicUploadBtn"><img src="assets/img/musicnote.ico" alt="music icon"></span>
-                    <input id="loadMusic" required type="file" accept="audio/mp3">
+                    <input id="loadMusic" class="setValid" required type="file" oninvalid="this.setCustomValidity('Fill this guy')" oninput="setCustomValidity('')" accept="audio/mp3">
                     <span id="loader"></span>
                 </label>
                 <input id="siTunes" class="iTunesLink linkInput" type="text" placeholder="iTunes link">
