@@ -5,9 +5,8 @@
         uploadMusic();
         playAudio();
         audioTimer();
-        pseudoValidateForm();
         $(window).resize(function () {
-            labelWidth()
+            labelWidth();
         });
         var loadFile = function(event) {
             var output = document.getElementById('output');
@@ -55,18 +54,20 @@
     }
     function audioTimer() {
         var audio = document.getElementById('sound');
-        var duration;
-        audio.addEventListener('loadedmetadata', function() {
-            duration = audio.duration;
-            console.log(duration);
-            setInterval(function() {
-                var currTime = getMinutes(Math.floor(audio.currentTime));
-                var durr = getMinutes(Math.floor(duration));
-                audioTimer.text('(' + (currTime) + '/' + durr + ')');
-            }, 1000)
-        });
-        if (audio)
-        var audioTimer = $('.audioTimer');
+        if (audio) {
+            var duration;
+            audio.addEventListener('loadedmetadata', function () {
+                duration = audio.duration;
+                console.log(duration);
+                setInterval(function () {
+                    var currTime = getMinutes(Math.floor(audio.currentTime));
+                    var durr = getMinutes(Math.floor(duration));
+                    audioTimer.text('(' + (currTime) + '/' + durr + ')');
+                }, 1000)
+            });
+            if (audio)
+                var audioTimer = $('.audioTimer');
+        }
     }
     function getMinutes(seconds) {
         var minutes = seconds / 60;
@@ -74,24 +75,26 @@
         return (Math.floor(minutes) + ':' + sec);
         console.log(seconds)
     }
-    function pseudoValidateForm() {
-        var nameSong = $('#nameSong'), lyricsSong = $('#textSong'), imageSong = $('#loadImg'), musicSong = $('#loadMusic');
-        if (nameSong.length != 0 && nameSong.val() != ' ' && lyricsSong != 0 && lyricsSong.val() != ' ' && imageSong.val() != '' && musicSong.val != '') {
-            $('#publishButton').removeAttr('disabled');
-        } else {
-            $('#publishButton').attr('disabled','disabled');
-        }
-    }
+    // function pseudoValidateForm() {
+    //     var nameSong = $('#nameSong'), lyricsSong = $('#textSong'), imageSong = $('#loadImg'),
+    //         musicSong = $('#loadMusic'), iTunesLink = document.getElementById('siTunes'), googlePlayLink = $('#sGooglePlay');
+    //     if (nameSong.length != 0 && nameSong.val() != ' ' && lyricsSong != 0 && lyricsSong.val() != ' ' && imageSong.val() != '' && musicSong.val != '') {
+    //         $('#publishButton').removeAttr('disabled');
+    //     } else {
+    //         $('#publishButton').attr('disabled','disabled');
+    //     }
+    // }
+
 
     var loadImg = document.getElementById('loadImg');
-    loadImg.addEventListener('onChange', function (event) {
+    loadImg.addEventListener('change', function (event) {
             var previewImg = document.getElementById('previewImg');
             previewImg.src = URL.createObjectURL(event.target.files[0]);
             if (previewImg.val != '') {
                 $('.imgUploadBtn').text('');
                 $('.sizes').remove();
-            }
-    });
+            };
+    })
 
 
 

@@ -37,6 +37,9 @@ body {
     }
     div.timer {
       margin-top: -20px;
+      @media screen and (max-width: 736px) {
+        margin-top: -10px;
+      }
 
       .audioI {
         position: relative;
@@ -45,14 +48,56 @@ body {
           font-family: OSSemibold;
           color: $black;
           padding-left: 30px;
+          @media screen and (max-width: 1024px) and (orientation: landscape){
+            padding-left: 27px;
+          }
+          @media screen and (max-width: 992px){
+
+          }
+          @media screen and (max-width: 560px) and (orientation: portrait) {
+            padding-left: 25px;
+          }
         }
         .playStop {
           position: absolute;
-          top: 7px;
+          top: 6px;
           left: 0;
+          @media screen and (max-width: 992px) {
+            top: 4px;
+          }
+          @media screen and (max-width: 992px) and (orientation: portrait){
+            top: 6px;
+          }
+          @media screen and (max-width: 736px) {
+            top: 3px;
+          }
+          @media screen and (max-width: 560px) {
+            top: 6px;
+          }
+          @media screen and (max-width: 560px) and (orientation: portrait) {
+            top: 4px;
+          }
+          @media screen and (max-width: 320px) and (orientation: portrait) {
+            top: 3px;
+          }
           img {
             width: 20px;
-            height: 20px;
+            height: auto;
+            @media screen and (max-width: 1024px){
+              width: 17px;
+            }
+            @media screen and (max-width: 1024px) and (orientation: portrait) {
+              width: 20px;
+            }
+            @media screen and (max-width: 992px) and (orientation: portrait){
+
+            }
+            @media screen and (max-width: 560px) and (orientation: portrait) {
+              width: 16px;
+            }
+            @media screen and (max-width: 320px) and (orientation: portrait) {
+              width: 14px;
+            }
           }
         }
       }
