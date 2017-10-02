@@ -1,5 +1,4 @@
 (function ($) {
-
     $(document).ready(function () {
         labelWidth();
         uploadMusic();
@@ -58,7 +57,6 @@
             var duration;
             audio.addEventListener('loadedmetadata', function () {
                 duration = audio.duration;
-                console.log(duration);
                 setInterval(function () {
                     var currTime = getMinutes(Math.floor(audio.currentTime));
                     var durr = getMinutes(Math.floor(duration));
@@ -73,7 +71,6 @@
         var minutes = seconds / 60;
         var sec = seconds % 60 < 10 ? '0' +  (seconds % 60) : seconds % 60;
         return (Math.floor(minutes) + ':' + sec);
-        console.log(seconds)
     }
     // function pseudoValidateForm() {
     //     var nameSong = $('#nameSong'), lyricsSong = $('#textSong'), imageSong = $('#loadImg'),
@@ -87,14 +84,18 @@
 
 
     var loadImg = document.getElementById('loadImg');
-    loadImg.addEventListener('change', function (event) {
+    if (loadImg) {
+        loadImg.addEventListener('change', function (event) {
             var previewImg = document.getElementById('previewImg');
             previewImg.src = URL.createObjectURL(event.target.files[0]);
             if (previewImg.val != '') {
                 $('.imgUploadBtn').text('');
                 $('.sizes').remove();
-            };
-    })
+            }
+            ;
+        })
+    }
+
 
 
 
