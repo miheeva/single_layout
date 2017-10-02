@@ -30,7 +30,7 @@
     }
     function resizeCover() {
         var cover = $('.coverImg');
-        if ($(window).height() < 900) {
+        if ($(window).height() < 685) {
             console.log($(window).height());
             cover.css('height',$(window).height() + 'px');
         }
