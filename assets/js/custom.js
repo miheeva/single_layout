@@ -7,11 +7,20 @@
         $(window).resize(function () {
             labelWidth();
         });
+        $('#buy').click(function () {
+            $('#buyModal').css('display','flex');
+        });
+        $(document).mouseup(function (e){
+            var modal = $("#buyModal");
+            if (modal.is(e.target)
+                && modal.has(e.target).length === 0) {
+                modal.hide();
+            }
+        });
         var loadFile = function(event) {
             var output = document.getElementById('output');
             output.src = URL.createObjectURL(event.target.files[0]);
         };
-
     });
 
     function labelWidth() {
@@ -40,10 +49,10 @@
     function playAudio() {
         var audio = document.getElementById('sound');
         var buttonPlay = $('.playStop');
-        buttonPlay.html('<img src="assets/img/play.png" alt="">');
+        buttonPlay.html('<img class="imgPlay" src="assets/img/play.png" alt="">');
         buttonPlay.click(function () {
             if (audio.paused) {
-                buttonPlay.html('<img src="assets/img/play.png" alt="">');
+                buttonPlay.html('<img class="imgPause" src="assets/img/play.png" alt="">');
                 audio.play();
             } else {
                 buttonPlay.html('<img src="assets/img/pause.png" alt="">');

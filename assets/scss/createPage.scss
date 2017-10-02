@@ -6,6 +6,41 @@ body {
       width: 100%;
       padding-top: 20px;
       position: relative;
+      .textSong {
+        font-size: $bigText;
+        font-family: OSLight;
+        color: $black;
+        outline: none;
+        border: none;
+        resize: none;
+        max-height: 200px;
+        height: 90px;
+        width: 100%;
+        text-overflow: ellipsis;
+        @media screen and (max-width: 320px){
+          margin-top: 5px;
+        }
+        &:-moz-placeholder {
+          color: $lightGrayPl;
+          font-family: OSLight;
+          font-size: $bigText;
+        }
+        &::-moz-placeholder {
+          color: $lightGrayPl;
+          font-family: OSLight;
+          font-size: $bigText;
+        }
+        &:-ms-input-placeholder {
+          color: $lightGrayPl;
+          font-family: OSLight;
+          font-size: $bigText;
+        }
+        &::-webkit-input-placeholder {
+          color: $lightGrayPl;
+          font-family: OSLight;
+          font-size: $bigText;
+        }
+      }
       input {
       width: 100%;
         outline: none;
@@ -13,18 +48,11 @@ body {
           border: none;
 
         }
-        &.nameSong{
+        &.nameSong {
           @include webkitPlaceholder($lightGrayPl, $veryBigText, OSLight);
           @include mozPlaceholder($lightGrayPl, $veryBigText, OSLight);
           font-family: OSLight;
           font-size: $veryBigText;
-          color: $black;
-        }
-        &.textSong {
-          @include webkitPlaceholder($lightGrayPl, $bigText, OSLight);
-          @include mozPlaceholder($lightGrayPl, $bigText, OSLight);
-          font-size: $bigText;
-          font-family: OSLight;
           color: $black;
         }
         &.linkInput {
@@ -58,7 +86,7 @@ body {
         height: 530px;
         line-height: 2em;
         background-color: $backCover;
-        margin-top: 85px;
+        margin-top: 10px;
         .previewImg {
           width: 100%;
           height: auto;

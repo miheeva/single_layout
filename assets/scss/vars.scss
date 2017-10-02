@@ -58,7 +58,16 @@ body {
   font-size: 1rem;
   font-family: OSRegular;
 }
+.linkBuy {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
 
+}
 .blackBtn {
   position: absolute;
   top: 30px;
@@ -72,12 +81,14 @@ body {
   background: transparent;
   transition: all .4s;
   cursor: pointer;
+  outline: none;
     &:focus {
       outline: none;
     }
     &:hover {
       color: $white;
       background: $black;
+      outline: none;
     }
     &.publishBtn {
       right: -174px;
