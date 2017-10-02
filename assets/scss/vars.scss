@@ -17,13 +17,15 @@
 }
 @font-face {
   font-family: OSExtrabold;
-  src: url('../fonts/OpenSans/OpenSans-Extrabold.ttf');
+  src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf');
 }
 /*vars*/
 $lightGray: #cecece;
 $lightGrayPl: #c9c9c9;
 $white: #fff;
 $black: #000;
+$loaderGreen: #69EF8B;
+$loaderRed: #FF3B3B;
 $veryBigText: 2.8125rem;
 $bigText: 1.4375rem;
 $coverText: 2.2rem;
@@ -34,6 +36,22 @@ $backCover: #f7f7f7;
 /*classes*/
 html {
   font-size: 16px;
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 736px) and (orientation: landscape) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 560px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 10px;
+  }
+
 }
 body {
   font-size: 1rem;
@@ -65,9 +83,24 @@ body {
       width: 144px;
     }
     &.buyBtn {
-      right: -106px;
+      right: -30px;
+      top: 42px;
       width: 76px;
     }
 }
 
-
+/*scroll*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: $black;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}

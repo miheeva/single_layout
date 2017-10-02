@@ -1,0 +1,206 @@
+/* portrait*/
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    .blackBtn {
+      &.publishBtn {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 30px;
+      }
+      &.buyBtn {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+    .coverContainer {
+      flex: 0 1 560px;
+      max-width: 560px;
+      position: relative;
+      height: 560px;
+      margin: 0 auto;
+      left: auto;
+    }
+    .hpContainer {
+      display: none;
+    }
+    .textContainer {
+      flex: 0 1 560px;
+      max-width: 560px;
+      margin: 0 auto;
+      .infoTrack {
+        .nameTrack {
+          h1 {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    footer {
+      .containerFooter {
+        &.col-5 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  body {
+    .createForm {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  .coverContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto !important;
+  }
+  .textContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+    .infoTrack {
+      .nameTrack {
+        h1 {
+          &::before {
+            width: 29px;
+            height: 29px;
+            top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*landscape*/
+@media screen and (max-width: 1199px) and (orientation: landscape) {
+  body {
+    .blackBtn.buyBtn {
+      right: -60px;
+      top: 42px;
+      width: 76px;
+      @media screen and (max-width: 1119px) {
+        right: -15px;
+      }
+      @media screen and (max-width: 1024px) {
+        right: 0;
+        top: 34px;
+      }
+      @media screen and (max-width: 992px) {
+        right: 30px;
+        top: 27px;
+      }
+    }
+    .coverContainer {
+      flex: 0 0 50%;
+      max-width: 50%;
+      left: 10px;
+    }
+    .hpContainer {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .textContainer {
+      flex: 0 0 50%;
+      max-width: 50%;
+      .infoTrack {
+        .nameTrack {
+          h1 {
+            &::before {
+              width: 33px;
+              height: 33px;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      .col-7 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .containerFooter.col-5 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 998px) and (orientation: landscape) {
+  body {
+    .musicPageContainer {
+      max-width: 100%;
+    }
+    .blackBtn.buyBtn {
+      right: 10px;
+    }
+    .textContainer {
+      .infoTrack {
+        .nameTrack {
+          h1 {
+            &::before {
+              width: 24px;
+              height: 24px;
+              top: 4px;
+            }
+          }
+        }
+        .count {
+          span {
+            &::before {
+              width: 16px;
+              height: 16px;
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 872px) and (orientation: landscape) {
+  body {
+    .blackBtn {
+      &.publishBtn {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 30px;
+      }
+      &.buyBtn {
+        width: 60px;
+        height: 32px;
+        top: 31px;
+        right: 30px;
+        @media screen and (max-width: 832px) {
+          right: 15px;
+        }
+        @media screen and (max-width: 796px) {
+          position: relative;
+          top: auto;
+          right: auto;
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .textContainer {
+      .nameTrack {
+        h1 {
+          margin-bottom: 30px;
+          @media screen and (max-width: 796px) {
+            margin-bottom: 5px;
+          }
+          }
+        }
+      }
+    }
+  }

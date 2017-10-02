@@ -13,18 +13,19 @@
     <div class="row">
         <div class="col justify-content-center align-items-center flex-column">
             <form action="">
-                <input class="nameSong textInput" type="text" placeholder="Name of the song">
-                <input class="textSong textInput" type="text" placeholder="Lyrics...">
+                <input class="nameSong textInput" required type="text" placeholder="Name of the song">
+                <input class="textSong textInput" required type="text" placeholder="Lyrics...">
                 <!--<input class="fileSong" type="file">-->
                 <label class="imgUpload justify-content-center align-items-center flex-column">
                     <span class="imgUploadBtn">Cover <span class="sizes">(1180x1180)</span></span>
-                    <input type="file">
+                    <input id="loadImg" required type="file" accept="image/*">
                 </label>
                 <!--!-->
                 <!--<input class="fileSong" type="file">-->
                 <label class="musicUpload justify-content-center align-items-center flex-column">
-                    <span class="musicUploadBtn"><img src="assets/img/musicnote.ico" alt=""></span>
-                    <input type="file">
+                    <span class="musicUploadBtn"><img src="assets/img/musicnote.ico" alt="music icon"></span>
+                    <input id="loadMusic" required type="file" accept="audio/mp3">
+                    <span id="loader"></span>
                 </label>
                 <!--!-->
                 <input class="iTunesLink linkInput" type="text" placeholder="iTunes link">
@@ -41,7 +42,7 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 </html>

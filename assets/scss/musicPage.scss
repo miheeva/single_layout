@@ -1,0 +1,89 @@
+body {
+  .coverContainer {
+    height: 100vh;
+    position: fixed;
+    left: 55px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .textContainer {
+    display: flex;
+    div.nameTrack {
+      h1 {
+        font-size: $veryBigText;
+        text-transform: uppercase;
+        font-family: OSExtrabold;
+        color: $black;
+        display: inline-block;
+        position: relative;
+        &::before {
+          content: '';
+          display: inline-block;
+          position: relative;
+          background-image: url("../../assets/img/musicnote.ico");
+          background-size: cover;
+          width: 37px;
+          height: 37px;
+          top: 5px;
+          margin-right: 10px;
+        }
+      }
+    }
+    div.timer {
+      margin-top: -20px;
+
+      .audioI {
+        position: relative;
+        span.audioTimer {
+          font-size: $bigText;
+          font-family: OSSemibold;
+          color: $black;
+          padding-left: 30px;
+        }
+        .playStop {
+          position: absolute;
+          top: 7px;
+          left: 0;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+    }
+    div.textTrack {
+      p {
+        font-family: OSLight;
+        font-size: $bigText;
+        color: $black;
+      }
+    }
+    div.count {
+      span {
+        font-size: $bigText;
+        font-family: OSSemibold;
+        color: $black;
+        display: inline-block;
+        position: relative;
+        &::before {
+          content: '';
+          display: inline-block;
+          position: relative;
+          background-image: url("../../assets/img/headphone.png");
+          background-size: cover;
+          width: 22px;
+          height: 22px;
+          top: 2px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

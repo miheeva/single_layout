@@ -1,0 +1,54 @@
+body {
+  position: relative;
+  .buyModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgba(247,247,247,.7);
+    justify-content: center;
+    align-items: center;
+    .stores {
+      width: 100%;
+      height: 150px;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      .itemStores {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-family: OSSemibold;
+          font-size: $Text;
+          color: $black;
+          margin-right: 10px;
+        }
+        .storeLink {
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: OSRegular;
+            color: $black;
+            font-size: $Text;
+            text-decoration: none;
+            margin: 0 20px;
+            img {
+              width: 65px;
+              height: auto;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
