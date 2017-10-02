@@ -5,9 +5,14 @@
         uploadMusic();
         playAudio();
         audioTimer();
+        pseudoValidateForm();
         $(window).resize(function () {
             labelWidth()
         });
+        var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+        };
 
     });
 
@@ -69,6 +74,24 @@
         return (Math.floor(minutes) + ':' + sec);
         console.log(seconds)
     }
+    function pseudoValidateForm() {
+        var nameSong = $('#nameSong'), lyricsSong = $('#textSong'), imageSong = $('#loadImg'), musicSong = $('#loadMusic');
+        if (nameSong.length != 0 && nameSong.val() != ' ' && lyricsSong != 0 && lyricsSong.val() != ' ' && imageSong.val() != '' && musicSong.val != '') {
+            $('#publishButton').removeAttr('disabled');
+        } else {
+            $('#publishButton').attr('disabled','disabled');
+        }
+    }
+
+    var loadImg = document.getElementById('loadImg');
+    loadImg.addEventListener('onChange', function (event) {
+            var previewImg = document.getElementById('previewImg');
+            previewImg.src = URL.createObjectURL(event.target.files[0]);
+            if (previewImg.val != '') {
+                $('.imgUploadBtn').text('');
+                $('.sizes').remove();
+            }
+    });
 
 
 

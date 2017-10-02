@@ -59,6 +59,10 @@ body {
         line-height: 2em;
         background-color: $backCover;
         margin-top: 85px;
+        .previewImg {
+          width: 100%;
+          height: auto;
+        }
         .imgUploadBtn {
           display: block;
           box-sizing: border-box;

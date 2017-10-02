@@ -26,6 +26,7 @@ $white: #fff;
 $black: #000;
 $loaderGreen: #69EF8B;
 $loaderRed: #FF3B3B;
+$opacityBlack: rgba(0,0,0,.7);
 $veryBigText: 2.8125rem;
 $bigText: 1.4375rem;
 $coverText: 2.2rem;
@@ -87,8 +88,15 @@ body {
       top: 42px;
       width: 76px;
     }
+    &:disabled {
+      border: 2px solid $lightGray;
+      color: $lightGray;
+      &:hover {
+        color: $lightGray;
+        background: transparent;
+      }
+    }
 }
-
 /*scroll*/
 ::-webkit-scrollbar {
   width: 10px;
