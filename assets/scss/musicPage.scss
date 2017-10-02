@@ -8,8 +8,9 @@ body {
     justify-content: center;
     align-items: center;
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
+      display: block;
     }
   }
   .textContainer {
@@ -97,9 +98,6 @@ body {
             }
             @media screen and (max-width: 320px) and (orientation: portrait) {
               width: 14px;
-            }
-            &.imgPause {
-              
             }
           }
         }

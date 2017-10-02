@@ -5,6 +5,7 @@
         playAudio();
         audioTimer();
         $(window).resize(function () {
+            resizeCover();
             labelWidth();
         });
         $('#buy').click(function () {
@@ -26,6 +27,13 @@
     function labelWidth() {
         var label = $('.imgUpload');
         label.css('height',label.width());
+    }
+    function resizeCover() {
+        var cover = $('.coverImg');
+        if ($(window).height() < 900) {
+            console.log($(window).height());
+            cover.css('height',$(window).height() + 'px');
+        }
     }
     function uploadMusic() {
         var input = $('#loadMusic');
