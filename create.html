@@ -18,12 +18,12 @@
                 <!--<input class="fileSong" type="file">-->
                 <label class="imgUpload justify-content-center align-items-center flex-column">
                     <span class="imgUploadBtn">Cover1 <span class="sizes">(1180x1180)</span></span>
-                    <input id="loadImg" class="setValid" required type="file" oninvalid="this.setCustomValidity('Fill this guy')" oninput="setCustomValidity('')" accept="image/*" onchange="loadFile(event)">
+                    <input id="loadImg" class="setValid" required type="file" accept="image/*" onchange="loadFile(event)">
                     <img id="previewImg" class="previewImg">
                 </label>
                 <label class="musicUpload justify-content-center align-items-center flex-column">
                     <span class="musicUploadBtn"><img src="assets/img/musicnote.ico" alt="music icon"></span>
-                    <input id="loadMusic" class="setValid" required type="file" oninvalid="this.setCustomValidity('Fill this guy')" oninput="setCustomValidity('')" accept="audio/mp3">
+                    <input id="loadMusic" class="setValid" required type="file" accept="audio/mp3">
                     <span id="loader"></span>
                 </label>
                 <input id="siTunes" class="iTunesLink linkInput" type="text" placeholder="iTunes link">

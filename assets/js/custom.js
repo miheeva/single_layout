@@ -63,13 +63,18 @@
     function playAudio() {
         var audio = document.getElementById('sound');
         var buttonPlay = $('.playStop');
-        buttonPlay.html('<img class="imgPlay" src="assets/img/play.png" alt="">');
+        if ($(window).width() < 1024) {
+            buttonPlay.html('<img class="imgPlay" src="assets/img/play.png" alt="play button">');
+        } else {
+            buttonPlay.html('<img class="imgPlay" src="assets/img/pause.png" alt="pause button">');
+        }
+
         buttonPlay.click(function () {
             if (audio.paused) {
-                buttonPlay.html('<img class="imgPause" src="assets/img/play.png" alt="">');
+                buttonPlay.html('<img class="imgPause" src="assets/img/pause.png" alt="">');
                 audio.play();
             } else {
-                buttonPlay.html('<img src="assets/img/pause.png" alt="">');
+                buttonPlay.html('<img src="assets/img/play.png" alt="">');
                 audio.pause();
             }
         });

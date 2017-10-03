@@ -4,13 +4,14 @@
     .indexBtn {
       .containerBtn {
         height: 93vh;
+        img.logo {
+          width: 140px;
+        }
+        img.record {
+          width: 45px;
+        }
       }
-      .logo {
-        width: 180px;
-      }
-      .record {
-        width: 65px;
-      }
+
     }
     .createForm {
       min-width: 100%;
@@ -67,6 +68,19 @@
 }
 
 @media screen and (max-width: 560px) and (orientation: portrait) {
+  body {
+    .indexBtn {
+      .containerBtn {
+        img.logo {
+          width: 120px;
+        }
+        img.record {
+          width: 40px;
+        }
+      }
+    }
+  }
+
 
   .createForm {
     min-width: 100%;
